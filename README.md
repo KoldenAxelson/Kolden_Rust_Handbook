@@ -4,7 +4,7 @@ I am going through the Rust Handbook
 ### Lesson Progression
 - [X] Lesson 1
 - [X] Lesson 2
-- [ ] Lesson 3
+- [X] Lesson 3
 - [ ] Lesson 4
 - [ ] Lesson 5
 - [ ] Lesson 6
