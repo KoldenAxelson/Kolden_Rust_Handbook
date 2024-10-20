@@ -10,6 +10,7 @@ enum Context {
 fn main() {
     println!("Lesson 1: Complete");
     lesson2();
+    lesson3();
 }
 
 fn set_context(context: Context) {
@@ -54,4 +55,8 @@ fn lesson2() {
     }
     set_context(Context::None);
     println!("Lesson 2: Complete");
+}
+
+fn lesson3() {
+    
 }
