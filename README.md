@@ -5,7 +5,7 @@ I am going through the Rust Handbook
 - [X] Lesson 1
 - [X] Lesson 2
 - [X] Lesson 3
-- [ ] Lesson 4
+- [X] Lesson 4
 - [ ] Lesson 5
 - [ ] Lesson 6
 - [ ] Lesson 7

@@ -13,6 +13,7 @@ fn main() {
     println!("Lesson 1: Complete");
     lesson2();
     lesson3();
+    lesson4();
 }
 
 fn set_context(context: Context) {
@@ -30,8 +31,8 @@ fn lesson2() {
     set_context(Context::Side);
 
     // Generate a Secret Number between 1-9
-    println!("Guess a number... (1 - 9)");
-    let secret_number = rand::thread_rng().gen_range(1..=9);
+    println!("Guess a number... (1 - 2)");
+    let secret_number = rand::thread_rng().gen_range(1..=2);
 
     // Game Loop of Guess Number
     loop {
@@ -156,4 +157,40 @@ fn lesson3() {
 fn lesson3_helper(x: usize) -> usize {
     print!("{x} => ");
     return x * 2;
+}
+
+// Lesson 4: Understanding Ownership
+fn lesson4() {
+    set_context(Context::Side);
+
+    // Only 1 thing may own an address at a time.
+    let x = String::from("ABC");
+    let y = x;
+    // Error: Borrow of moved line
+    // println!("{x} {y}");
+    //           ^^^
+    // Use & to borrow the value (var is a ref)
+    let x = &y;
+    println!("X={x} Y={y}");
+    // Could also create a totally new String with the same value using .clone()
+    // But better to borrow than create where you can
+    let x = 5;
+    let y = x;
+    println!("X={x} Y={y}");
+    // This works bc it's a know size at compile time. (Primitive Values)
+    // RoT: Objects use &, Primitives dw about it
+    
+    // This lesson is a lot of reading. Boiled down to RoT.
+    // Also there are dangling return values for functions...
+    // Which is just a cool syntax thing that's best never used.
+    // fn my_function() -> Bool {
+    //  let b = true;
+    //  b
+    // } 
+    
+    // You can also just reference part of an object
+    // Best to look up the use case per instance due to rarity of application
+
+    set_context(Context::None);
+    println!("Lesson 4: Complete");
 }
